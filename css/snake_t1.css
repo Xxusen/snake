@@ -1,0 +1,100 @@
+@font-face {
+	font-family: arcade;
+	src: url("../fonts/arcade.ttf");
+}
+
+
+.arena{
+	position: relative;
+	border: 1px dashed black;
+	outline: none;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 3%;
+	user-select: none;
+}
+.arena .popOver {
+	font-family: arcade;
+	position: absolute;
+	width: 70%;
+	height: auto;
+	background-color: white;
+	border: 1px solid rgb(220,220,220);
+	z-index: 102;
+}
+
+
+
+.arena .popOver .title{
+	display: block;
+	margin-top: 4%;
+	margin-bottom: 4%;
+	text-align: center;
+}
+
+.arena .popOver .text {
+	width: 75%;
+	margin: auto;
+	text-align: justify-all;
+}
+
+.arena .popOver .button {
+	display:block;
+	margin: auto;
+	margin-top: 5%;
+	margin-bottom: 2%;
+	width: 25%;
+	padding: 3px;
+	text-align: center;
+	border: 1px solid rgb(190,190,190);
+}
+
+.arena .popOver .button:hover {border-color: black;border-style: solid; cursor: pointer;}
+.arena .popOver .button:active{border: 1px solid black; background-color: rgb(240,240,240);}
+
+.timer {
+	position: absolute;
+	color: gainsboro;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	padding-top: 23%;
+	font-size: 2em;
+	font-family: arcade;
+}
+
+.arena .scoreDisplay {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 18%;
+	line-height: 30px;
+	text-align: center;
+	border: 1px dashed black;
+	border-bottom: 0;
+	color: green;
+	font-family: arcade;
+	background-color: gainsboro;
+	opacity: 0.5;
+	z-index: 102;
+}
+
+.block{
+	position: absolute;
+	border: 1px dotted white;
+	background-color: black;
+	z-index: 100;
+}
+
+.block.head{
+	background-color: orange;
+	z-index: 101;
+}
+
+.blink .block {
+	animation: blinker 2s linear infinite;
+}
+
+@keyframes blinker {
+	50% { background-color: white; border-color: black; }
+}
